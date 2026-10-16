@@ -31,30 +31,36 @@
 #     print(text)
 
 
-while True:
-    try:
-        arajin = int(input('gri araji tivy:'))
-        erkrord = int(input('gri erkrord tivy:'))
-        break        
-    except ValueError:
-        print('invalid input')
+# while True:
+#     try:
+#         arajin = int(input('gri araji tivy:'))
+#         erkrord = int(input('gri erkrord tivy:'))
+#         break        
+#     except ValueError:
+#         print('invalid input')
 
-gorcoxutyun = input('gri gorcoxutyuny:')
+# gorcoxutyun = input('gri gorcoxutyuny:')
 
-if gorcoxutyun == '+':
-    print(arajin + erkrord)
-elif gorcoxutyun == '-':
-    print(arajin-erkrord)
-elif gorcoxutyun == '*':
-    print(arajin*erkrord)
-elif gorcoxutyun == '/':  
-    try:
-        print(arajin/erkrord)
-    except ZeroDivisionError:
-        print('division by zero is not allowed')
-else:
-    print('unknown operation')
-
-
+# if gorcoxutyun == '+':
+#     print(arajin + erkrord)
+# elif gorcoxutyun == '-':
+#     print(arajin-erkrord)
+# elif gorcoxutyun == '*':
+#     print(arajin*erkrord)
+# elif gorcoxutyun == '/':  
+#     try:
+#         print(arajin/erkrord)
+#     except ZeroDivisionError:
+#         print('division by zero is not allowed')
+# else:
+#     print('unknown operation')
 
 
+# try except fileri het ete chlini error tal 
+
+try:
+    with open ('notes.txt', 'r', encoding = 'utf-8') as f:
+        text = f.read()
+        print(text)
+except FileNotFoundError:
+    print('file not found')
