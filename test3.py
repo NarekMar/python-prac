@@ -31,8 +31,14 @@
 #     print(text)
 
 
-arajin = int(input('gri araji tivy:'))
-erkrord = int(input('gri erkrord tivy:'))
+while True:
+    try:
+        arajin = int(input('gri araji tivy:'))
+        erkrord = int(input('gri erkrord tivy:'))
+        break        
+    except ValueError:
+        print('invalid input')
+
 gorcoxutyun = input('gri gorcoxutyuny:')
 
 if gorcoxutyun == '+':
@@ -41,10 +47,14 @@ elif gorcoxutyun == '-':
     print(arajin-erkrord)
 elif gorcoxutyun == '*':
     print(arajin*erkrord)
-elif gorcoxutyun == '/':    
-    if erkrord == 0:
-        print('cannot divide to zero')
-    else:
+elif gorcoxutyun == '/':  
+    try:
         print(arajin/erkrord)
+    except ZeroDivisionError:
+        print('division by zero is not allowed')
 else:
     print('unknown operation')
+
+
+
+
