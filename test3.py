@@ -58,9 +58,43 @@
 
 # try except fileri het ete chlini error tal 
 
-try:
-    with open ('notes.txt', 'r', encoding = 'utf-8') as f:
-        text = f.read()
-        print(text)
-except FileNotFoundError:
-    print('file not found')
+# try:
+#     with open ('notes.txt', 'r', encoding = 'utf-8') as f:
+#         text = f.read()
+#         print(text)
+# except FileNotFoundError:
+#     print('file not found')
+
+
+# count_vowels = 0
+# text = input('grir text: ')
+# for i in text.lower():
+#     if i == 'a' or i == 'e' or i == 'i' or i == 'u' or i == 'o':
+#         count_vowels += 1
+        
+# print(f'Number of vowels in the text: {count_vowels}')
+
+
+# def count_vowels(text):
+#     count = 0
+#     for i in text.lower():
+#         if i in "aeiouаеёиоуыэюя":
+#             count += 1
+#     return count
+
+# text = input('grir text: ')
+# if count_vowels(text) == 0:
+#     print('No vowels found in the text.')
+# else:
+#     print(f'Number of vowels in the text: {count_vowels(text)}')
+
+
+
+
+while True:
+    try:
+        arajin = int(input('gri tiv: '))
+        print(arajin**2)
+        break  
+    except ValueError:
+        print('invalid input')
